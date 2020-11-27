@@ -5,5 +5,30 @@
 </ion-header>
 
 <ion-content>
-
+<form>
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center offset="2" size-xs="2" size-md="4" size-lg="4" class="ion-padding-top">
+        <ion-img src=""></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col align-self-center size-md="6" size-lg="4" size-xs="10" offset-xs="1" offset-lg="4" offset-md="3">
+        <div class="ion-padding-bottom">
+          <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input type="text" name="usuario" required ></ion-input>
+          </ion-item>
+          <ion-item class="ion-padding-top">
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" name="password" required></ion-input>
+          </ion-item>
+        </div>
+        <div class="ion-padding-top">
+          <ion-button shape="round" expand="block" color="maipo">Entrar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</form>
 </ion-content>
