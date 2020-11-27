@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MicuentaPage implements OnInit {
 
+  displayUserData : any;
+
   constructor(private AuthService:AuthService) { }
 
   ngOnInit() {
+    this.AuthService.userData$.subscribe((res:any) => {
+      
+      this.displayUserData = res;
+    })
   }
 
   logoutAction(){

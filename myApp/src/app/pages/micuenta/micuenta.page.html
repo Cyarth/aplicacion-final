@@ -9,11 +9,20 @@
 
 <ion-content>
 <ion-grid>
-  <ion-row style="margin-top: 10%;">
-    <ion-avatar style="margin-left: 3%;">
-      <img src="https://www.catlife.co/wp-content/uploads/2016/04/cropped-logo-login-1.png">
-    </ion-avatar>
-    <ion-label style="margin-left: 5%; margin-top: 7%;">Hola</ion-label>
+  <ion-row>
+    <ion-col align-self-right size-xs="3" size-md="3" size-lg="3" class="ion-padding-top">
+      <ion-avatar>
+        <img src="https://www.catlife.co/wp-content/uploads/2016/04/cropped-logo-login-1.png">
+      </ion-avatar>
+    </ion-col>
+    <ion-col align-self-left size-xs="4" offset-xs="1"  >
+     <ion-label>Bienvenido {{displayUserData?.nombrecompleto}}</ion-label>
+    </ion-col>
+    <ion-row>
+      <ion-col align-self-center size-xs="12" offset-xs="1" >
+        <ion-label>{{displayUserData?.correoelectronico}}</ion-label>
+      </ion-col>
+    </ion-row>
     
   </ion-row>
   <ion-row style="margin-top: 10%; margin-left: 10%;">

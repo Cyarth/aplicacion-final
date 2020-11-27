@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   environment = environment;
 
+  //en esta variable almacenamos los datos del user 
   userData$ = new BehaviorSubject<any>('');
 
   constructor(
@@ -22,6 +23,8 @@ export class AuthService {
 
     getUserData(){
       this.storageService.get(AuthConstants.AUTH).then(res =>{
+        
+        //con el metodo next actualizamos los datos de userData$
         this.userData$.next(res);
       })
     }
