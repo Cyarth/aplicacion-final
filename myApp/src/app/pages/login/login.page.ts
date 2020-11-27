@@ -53,4 +53,7 @@ export class LoginPage implements OnInit {
       this.toastService.presentToast('porfavor ingresa más informacion')
     }
   }
+
+  
+
 }

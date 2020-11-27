@@ -1,9 +1,24 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Buscar pedido</ion-title>
+    <ion-title>
+      Buscar pedido
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Busca tu pedido</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-icon name="search" class="iconSize"></ion-icon>
+    </ion-row>
+<ion-searchbar placeholder="Ingresar n° pedido" required></ion-searchbar>
+<ion-button expand="full" shape="round" routerLink="/mi-pedido" color="success" >Buscar</ion-button>
 
+  </ion-grid>
 </ion-content>

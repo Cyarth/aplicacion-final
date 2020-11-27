@@ -1,9 +1,62 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Mi cuenta</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis pedidos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<ion-grid>
+  <ion-row style="margin-top: 10%;">
+    <ion-avatar style="margin-left: 3%;">
+      <img src="https://www.catlife.co/wp-content/uploads/2016/04/cropped-logo-login-1.png">
+    </ion-avatar>
+    <ion-label style="margin-left: 5%; margin-top: 7%;">Hola</ion-label>
+    
+  </ion-row>
+  <ion-row style="margin-top: 10%; margin-left: 10%;">
+    <ion-label>
+    </ion-label>
+  </ion-row>
+  <ion-card>
+    <ion-card-content>
+      <ion-row>
+        <ion-label>Pedido numero : </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label> Fecha :</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label> Estado :</ion-label>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-row>
+        <ion-label>Pedido numero : </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label> Fecha :</ion-label>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-row>
+        <ion-label>Pedido numero : </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label> Fecha :</ion-label>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button color='maipo' (click)="logoutAction()">Cerrar sesion</ion-button>
+</ion-grid>
 
 </ion-content>
