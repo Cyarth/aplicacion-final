@@ -16,6 +16,10 @@ const routes:Routes=[
             {path:'micuenta',loadChildren:()=> import('../pages/micuenta/micuenta.module').then(m=> m.MicuentaPageModule)},
             {path:'pedido', loadChildren:()=> import('../pages/pedido/pedido.module').then(m=> m.PedidoPageModule)},
             {path:'aboutus', loadChildren:()=> import('../pages/aboutus/aboutus.module').then(m=> m.AboutusPageModule)},
+            {
+                path: 'buscarpedido',
+                loadChildren: () => import('../pages/buscarpedido/buscarpedido.module').then( m => m.BuscarpedidoPageModule)
+              }
             
         ]
     }];

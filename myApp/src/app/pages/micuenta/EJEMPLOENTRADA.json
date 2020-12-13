@@ -1,0 +1,29 @@
+{
+    "SolicitudClienteDTO": {
+      
+      "Estado": {
+        "Id": 0,
+        "Descripcion": "EN_TRANSITO",
+        "CampoExtra": null,
+        "NombreMetodo": null,
+        "Code": 0,
+        "Message": null
+      },
+
+      "Id": 0,
+
+
+      "IdCliente": 0,
+      "IdEstado": 0,
+      "Cantidad": 0,
+      "CalidadProducto": null,
+      "IdTipoProducto": 0,
+
+      "Comentario": null,
+      
+      "ClienteExterno": null,
+      "countSubastaFinaliza": 0,
+      "countSubasta": 0,
+      "Aprobado": true
+    }
+}

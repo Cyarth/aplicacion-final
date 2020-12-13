@@ -28,6 +28,7 @@ export class LoginPage implements OnInit {
         return (this.posData.username && this.posData.password && usuario.length>0 && password.length>0)
       }
 
+
   loginAction(){
     if(this.validateInputs()){
 
@@ -35,7 +36,6 @@ export class LoginPage implements OnInit {
       
       this.authService.login(body).subscribe((res: any) => {
         let nombreUser= res.nombreusuario;
-        console.log(nombreUser);
         console.log(res);
         
         if(res.Message=='OK'){

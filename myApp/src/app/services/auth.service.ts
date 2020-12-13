@@ -6,6 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,8 +16,9 @@ export class AuthService {
   //en esta variable almacenamos los datos del user 
   userData$ = new BehaviorSubject<any>('');
 
+
   constructor(
-    private HttpClient: HttpClient,
+    private httpClient: HttpClient,
     private storageService: StorageService,
     private router: Router
     ) { }
@@ -31,17 +33,24 @@ export class AuthService {
 
     login(postDate: any): Observable<any>{
       
-       let result = this.HttpClient.post(this.environment.api + '/Seguridad/LoginApp', postDate);
+       let result = this.httpClient.post(this.environment.api + '/Seguridad/LoginApp', postDate);
 
       console.log(result);
       return result;
     }
 
-    getSolicitud(){
+    getPedido(postDate: any): Observable<any>{
+      let path = 'http://portafolioduoc.ddns.net/PotafolioServicio/api/Negocio/GetListSeletProveeSolicitudApp'
+      let result = this.httpClient.post(path, postDate);
+      //console.log(result);
+      return result;
+   }
 
-      
+   finalizarSolicitud(postData: any){
+      return this.httpClient.post(this.environment.api + '/Negocio/UpdateEstadoDetalleSeletProveeSolicitud', postData);;
+   }
 
-    }
+    
     logout(){
       this.storageService.removeItem(AuthConstants.AUTH).then(res=>{
         this.userData$.next('');

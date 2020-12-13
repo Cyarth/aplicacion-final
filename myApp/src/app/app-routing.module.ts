@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  },
+  {
+    path: 'buscarpedido',
+    loadChildren: () => import('./pages/buscarpedido/buscarpedido.module').then( m => m.BuscarpedidoPageModule)
   }
 
 ];
